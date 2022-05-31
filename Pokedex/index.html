@@ -15,12 +15,30 @@
     
 </head>
 <body>
+
     <h1 class="title">Pokedex</h1>
 
-    <div class="pokemon-container">
+    <button id="todos" type="button" class="btn btn-primary">Mostrar Todos</button>
+    <button id="particular" type="button" class="btn btn-primary">Buscar Particular</button>
+
+    
+    <div class="contenedor-busqueda" >
+     
+    <button id="buscar" class="oculto"></button>
+    </div>
+    
+
+    <div class="contenedor-pokemon">
 
 
     </div>
+
+    <nav class="paginado" id="paginador">
+      <ul class="pagination paginado">
+        <li id="anterior" class="page-item"><a class="page-link" href="#">Anterior</a></li>
+        <li id="siguiente" class="page-item"><a class="page-link" href="#">Siguiente</a></li>
+      </ul>
+    </nav>
 
     <script src="js/pokedex.js"></script>
 </body>

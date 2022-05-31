@@ -1,16 +1,15 @@
 body {
-  background-color: cadetblue;
+  background-color: rgb(39, 136, 19);
   text-align: center;
-  min-height: 100vh;
   }
   
   h1 {
-    color: black;
+    color: rgb(248, 252, 248);
     font-weight:bold;
     font-family: Arial, Helvetica, sans-serif;
   }
   
-  .pokemon-container {
+  .contenedor-pokemon {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr;
     gap: 30px;
@@ -21,5 +20,95 @@ body {
     margin-top: 20px;
   }
 
-
+  .contenedor-parametros {
+    display: grid;
+    grid-template-columns: 0.5fr 1fr ;
+    gap: 10px;
+    width: 20%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 20px;
+    margin-top: 20px;
+    color: white;
+    justify-items: end;
+    justify-content: center;
+    align-content: center;
+    align-items: center;
+}
  
+
+  .contenedor-particular {
+    display: grid;
+    grid-template-columns: 1fr ;
+    gap: 30px;
+    width: 50vh;
+    height: 50%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 40px;
+    margin-top: 20px;
+  }
+
+.pokemon-frente, 
+.pokemon-atras {
+    background-color: white;
+    border-radius: 15px;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+}
+ 
+.pokemon-atras {
+  transform: rotateY(180deg);
+  position: absolute;
+  top: 0%;
+  font-weight: bold;
+}
+
+.nombre {
+  text-transform: capitalize;
+  font-weight: bold;
+  font-size: 1.2rem;
+}
+
+.paginado {
+  width: 90%;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 50px;
+}
+
+#paginador {
+  display: none;
+}
+
+.oculto {
+  display: none;
+}
+
+.contenedor-tarjeta {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  transition: transform 0.8s;
+  transform-style: preserve-3d;
+}
+
+.flip-card:hover .contenedor-tarjeta {
+  transform: rotateY(180deg);
+}
+
+
+
+
+.contenedor-estadisticas {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  padding: 15px;
+  text-transform: capitalize;
+  text-align: center;
+  font-size: small;
+  color: rgb(6, 99, 10);
+}
+
