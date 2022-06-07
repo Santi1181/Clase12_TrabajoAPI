@@ -19,13 +19,34 @@
 <body>
     <h1 class="title">Casa de Cambio</h1>
 
-    <div class="form-floating contenedor-opciones-busqueda">
-        <select id="monedas" ></select>
+    <button id="cotizaciones" type="button" class="btn btn-primary">Mostrar Cotizaciones</button>
+    <button id="conversion" type="button" class="btn btn-primary">Realizar Conversión</button>
 
 
+    <div class="contenedor-conversion oculto">
+        <select id="moneda-1-conversion" class="formato-entrada-texto"></select>
+        <input type="number" name="" id="moneda-a-convertir" min="0" class="formato-entrada-texto">
+        <select id="moneda-2-conversion" class="formato-entrada-texto"></select>
+
+        <button id="convertir" class="btn btn-secondary">Convertir</button>
     </div>
 
-    <div class="container contenedor-tabla">
+    <div class="contenedor-resultado oculto">
+        <span id="resultado-moneda">Rsultado Conversión</span>
+        <input type="text" id="resultado" class="resultado-conversion formato-entrada-texto">
+        <span id="resultado-moneda-conversion"></span>
+    </div>
+
+    <div class="form-floating contenedor-opciones-busqueda oculto">
+        <select id="monedas" class="formato-entrada-texto"></select>
+        <button id="actualizar" class="btn btn-secondary">Actualizar</button>
+        <div style="color: white">
+            Ultima Actualización:
+            <span id="ultima-actualizacion"> </span>
+        </div>
+    </div>
+
+    <div class="container contenedor-tabla oculto">
         <table class="table table-success table-striped table-bordered" id="tabla">
             <thead class="table-primary">
                 <tr>
@@ -40,5 +61,5 @@
     </div>
     <script src="js/exchange.js"></script>
 </body>
-
 </html>
+
